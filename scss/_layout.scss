@@ -1,0 +1,454 @@
+@use 'base' as *;
+
+.main {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+
+    &-text {
+        padding-left: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $primary-color;
+        width: 40%;
+        height: 100%;
+
+        &-prim {
+            color: $primary-color;
+            letter-spacing: 1px;
+            font-size: 3rem;
+            line-height: 4rem;
+            font-variant: all-small-caps;
+
+            span {
+                font-variant: normal;
+                color: $tertiary-color;
+            }
+        }
+
+        &-sec {
+            display: inline-block;
+            line-height: 4rem;
+            letter-spacing: 1px;
+            font-size: 5rem;
+        }
+
+        &-par {
+            margin-top: 1rem;
+
+            &-paratext {
+                text-align: justify;
+            }
+
+            p {
+                margin: 0.5rem 0;
+                font-family: $font-spectral;
+
+                a {
+                    text-decoration: none;
+                    font-family: $font-spectral;
+                    color: $tertiary-color;
+
+                }
+
+            }
+        }
+    }
+
+    &-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+
+        img {
+            border-radius: 10px;
+            width: 60%;
+            box-shadow: 0 0 25px $pure-black;
+
+        }
+
+        // &-indexpage {
+        //     box-shadow: 0 0 25px $pure-black;
+        // }
+
+        &-kapoenen {
+            outline: 7px solid $kapoenen-color;
+            box-shadow: 0 0 50px $kapoenen-color;
+        }
+
+        &-welpen {
+            outline: 7px solid $welpen-color;
+            // box-shadow: 0 0 50px $welpen-color;
+
+        }
+
+        &-jonggivers {
+            outline: 7px solid $jonggivers-color;
+            // box-shadow: 0 0 50px $jonggivers-color;
+
+        }
+
+        &-givers {
+            outline: 7px solid $givers-color;
+            // box-shadow: 0 0 50px $givers-color;
+
+        }
+
+        &-jins {
+            outline: 7px solid $jins-color;
+            // box-shadow: 0 0 50px $jins-color;
+
+        }
+
+        &-leiding {
+            outline: 7px solid $leiding-color;
+            // box-shadow: 0 0 50px $leiding-color;
+
+        }
+
+    }
+}
+
+.section {
+    height: 100vh;
+    width: 100%;
+
+    &-logocontainer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 20%;
+
+        &-logo {
+            width: 20%;
+        }
+    }
+
+    &-wrap {
+        height: 80%;
+        display: flex;
+
+        &-imgcontainer {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            img {
+                border-radius: 10px;
+                width: 80%;
+                box-shadow: 0 0 25px $pure-black;
+            }
+        }
+
+        &-textcontainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 50%;
+
+            &-text {
+                padding: 1rem;
+                width: 80%;
+                font-family: $font-spectral;
+            }
+        }
+    }
+}
+
+// TAKWERKING
+
+.takwerking {
+    padding: 5rem 10rem;
+    display: flex;
+    align-items: center;
+    height: 90vh;
+
+    &-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+
+        &-head {
+            color: $primary-color;
+            letter-spacing: 1px;
+            font-size: 3rem;
+        }
+
+        &-para {
+            p {
+                margin: 1rem 0;
+                font-family: $font-spectral;
+                line-height: 2rem;
+                text-align: justify;
+            }
+        }
+    }
+
+    &-takken {
+        height: 100%;
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+
+        &-container {
+            width: 75%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+
+            &-img {
+                position: relative;
+                width: 12rem;
+                height: 12rem;
+                margin: 0.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $pure-white;
+                transition: transform .2s cubic-bezier(0.83, 0, 0.17, 1);
+
+                h1 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    color: $primary-color;
+                    font-size: 1.75rem;
+                    background-color: rgb($pure-white, .6);
+                    width: 50%;
+                    height: 100%;
+                    letter-spacing: 2px;
+                    line-height: 2rem;
+                    text-align: center;
+                    opacity: 0;
+                    transition: opacity .2s cubic-bezier(0.83, 0, 0.17, 1);
+
+                }
+
+                img {
+                    width: 50%;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                    transition: transform .2s cubic-bezier(0.83, 0, 0.17, 1);
+
+                    h1 {
+                        transition: opacity .2s cubic-bezier(0.83, 0, 0.17, 1);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Takken
+
+.main {
+    &-text {
+        width: 40%;
+        margin-left: 3rem;
+
+        &-head {
+            margin: 0.5rem 0;
+            letter-spacing: 1px;
+            font-size: 3rem;
+        }
+
+        .kapoenen {
+            color: $kapoenen-color;
+        }
+
+        .welpen {
+            color: $welpen-color;
+        }
+
+        .jonggivers {
+            color: $jonggivers-color;
+        }
+
+        .givers {
+            color: $givers-color;
+        }
+
+        .jins {
+            color: $jins-color;
+        }
+
+        .leiding {
+            color: $leiding-color;
+        }
+
+        &-para {
+            width: 70%;
+            color: black;
+            font-family: $font-spectral;
+            line-height: 2rem;
+            text-align: justify;
+
+            span {
+                font-family: $font-spectral;
+                color: $tertiary-color;
+                letter-spacing: 1px;
+            }
+        }
+
+        &-leiding {
+            margin: 1rem 0;
+        }
+    }
+}
+
+// EVENTS
+
+.events {
+    width: 100%;
+
+    &-small {
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-smallhead {
+            font-family: $font-spectral;
+            font-variant: all-petite-caps;
+            font-weight: 900;
+            letter-spacing: 5px;
+            color: $tertiary-color;
+        }
+    }
+
+    &-event {
+        width: 100%;
+
+        &-info {
+            display: flex;
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    &-upcoming {
+        height: 90vh;
+        width: 100%;
+        // border: 1px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid red;
+
+        &-header {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-head {
+                font-size: 5rem;
+                letter-spacing: 2px;
+                color: $primary-color;
+            }
+        }
+
+        &-text {
+            padding-left: 12rem;
+            width: 40%;
+            height: 75vh;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-para {
+                font-family: $font-spectral;
+                text-align: justify;
+            }
+        }
+
+        &-image {
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            height: 75vh;
+
+            img {
+                border-radius: 10px;
+                width: 60%;
+                box-shadow: 0 0 25px $pure-black;
+
+            }
+
+        }
+    }
+
+    &-other {
+        // height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid red;
+
+        &-header {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid red;
+
+
+            &-head {
+                font-size: 5rem;
+                letter-spacing: 2px;
+                color: $primary-color;
+            }
+        }
+
+        &-text {
+            padding-left: 12rem;
+            width: 40%;
+            height: 85vh;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-para {
+                font-family: $font-spectral;
+                text-align: justify;
+            }
+        }
+
+        &-image {
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            height: 85vh;
+
+            img {
+                border-radius: 10px;
+                width: 60%;
+                box-shadow: 0 0 25px $pure-black;
+
+            }
+
+        }
+    }
+}

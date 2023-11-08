@@ -1,0 +1,41 @@
+// COLORS
+
+$pure-black: #000;
+$pure-white: #fff;
+
+$primary-color: #151B45;
+$secondary-color: #184B6F;
+$tertiary-color: #F37521;
+
+$kapoenen-color: rgb(255, 223, 83);
+$welpen-color: green;
+$jonggivers-color: orange;
+$givers-color:rgb(0, 0, 197);
+$jins-color: rgb(182, 0, 0);
+$leiding-color: purple;
+
+
+// FONTS
+
+$font-staatliches: 'staatliches', sans-serif;
+$font-anton: 'Anton', sans-serif;
+$font-spectral: 'Spectral', serif;
+
+// MIXINS
+
+
+* {
+    font-family: $font-staatliches;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
