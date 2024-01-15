@@ -114,6 +114,8 @@
 .section {
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 
     &-logocontainer {
         display: flex;
@@ -182,16 +184,37 @@
         }
 
         &-para {
+            &-verhuur {
+                // border: 1px solid red;
+                margin-bottom: 1.5rem;
+            }
+
             p {
                 margin: 1rem 0;
                 font-family: $font-spectral;
                 line-height: 2rem;
                 text-align: justify;
+
+                a {
+                    font-family: $font-spectral;
+                    color: $tertiary-color;
+                    text-decoration: none;
+                }
+
+                span {
+                    font-weight: 900;
+                    font-family: $font-spectral;
+                    font-variant-caps: all-small-caps;
+                    font-size: 1.5rem;
+                    color: $primary-color;
+                }
+
+
             }
         }
     }
 
-    &-takken {
+    &-imggrid {
         height: 100%;
         width: 40%;
         display: flex;
@@ -334,20 +357,19 @@
 
         &-info {
             display: flex;
+        }
 
-            &:nth-child(even) {
-                flex-direction: row-reverse;
-            }
+        &-inforight {
+            display: flex;
+            flex-direction: row-reverse;
         }
     }
 
     &-upcoming {
         height: 90vh;
         width: 100%;
-        // border: 1px solid red;
         display: flex;
         flex-wrap: wrap;
-        border: 1px solid red;
 
         &-header {
             width: 100%;
@@ -358,16 +380,15 @@
 
             &-head {
                 font-size: 5rem;
-                letter-spacing: 2px;
+                letter-spacing: 4px;
                 color: $primary-color;
             }
         }
 
         &-text {
-            padding-left: 12rem;
-            width: 40%;
+            padding: 12rem;
+            width: 45%;
             height: 75vh;
-            border: 1px solid red;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -379,16 +400,15 @@
         }
 
         &-image {
-            border: 1px solid red;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 60%;
+            width: 55%;
             height: 75vh;
 
             img {
                 border-radius: 10px;
-                width: 60%;
+                width: 65%;
                 box-shadow: 0 0 25px $pure-black;
 
             }
@@ -397,11 +417,9 @@
     }
 
     &-other {
-        // height: 100vh;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        border: 1px solid red;
 
         &-header {
             width: 100%;
@@ -409,21 +427,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid red;
 
 
             &-head {
                 font-size: 5rem;
-                letter-spacing: 2px;
+                letter-spacing: 4px;
                 color: $primary-color;
             }
         }
 
         &-text {
-            padding-left: 12rem;
-            width: 40%;
-            height: 85vh;
-            border: 1px solid red;
+            padding: 12rem;
+            width: 45%;
+            height: 90vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -435,12 +451,11 @@
         }
 
         &-image {
-            border: 1px solid red;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 60%;
-            height: 85vh;
+            width: 55%;
+            height: 90vh;
 
             img {
                 border-radius: 10px;
@@ -451,4 +466,260 @@
 
         }
     }
+}
+
+// INSCHRIJVINGEN
+
+.formulier {
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    margin: 0rem auto;
+
+    &-head {
+        color: $primary-color;
+        font-size: 3rem;
+    }
+
+    &-form {
+        width: 40%;
+
+        label {
+            font-size: 1.2rem;
+            color: $secondary-color;
+            letter-spacing: 1px;
+        }
+
+        .lightlabel {
+            font-size: 1rem;
+            font-family: $font-spectral;
+        }
+
+
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 0;
+
+            input {
+                font-family: $font-spectral;
+                font-size: 1rem;
+                height: 2rem;
+                padding-left: 0.5rem;
+
+                &:focus {
+                    border-color: $tertiary-color;
+                }
+
+            }
+
+            .contactgegevens {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                &-item {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0.5rem 0 0;
+
+                    label {
+                        font-family: $font-spectral;
+                    }
+
+                    input{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .geboortedatum {
+            flex-direction: column;
+
+            .datum {
+                display: flex;
+                justify-content: space-between;
+
+                &-item {
+                    width: 25%;
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        font-family: $font-spectral;
+                    }
+                }
+            }
+
+            input {
+                width: 100%;
+                text-align: center;
+                padding: 0;
+            }
+        }
+
+        .woonplaats {
+            display: flex;
+            flex-direction: column;
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                margin: 0.5rem 0 0;
+
+
+                &-last {
+                    display: flex;
+                    justify-content: space-between;
+
+                    &-nrgm {
+                        width: 45%;
+                        display: flex;
+                        flex-direction: column;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .social {
+            label {
+                font-size: 1.15rem;
+            }
+
+            &-answers {
+                display: flex;
+
+                select {
+                    width: 100%;
+                    font-family: $font-spectral;
+                    font-size: 1rem;
+                    height: 2rem;
+                    padding-left: 0.5rem;
+                }
+
+                &-answer {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    margin: .5rem 0 0;
+
+                    &:hover input~.checkmark {
+                        background-color: #ccc;
+                    }
+
+                    label {
+                        margin: 0 .5rem;
+                        font-size: 1.75rem;
+                        font-variant: all-small-caps;
+                    }
+
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        width: 1.3rem;
+                        cursor: pointer;
+
+                        &:checked~.checkmark {
+                            background-color: $secondary-color;
+                        }
+
+                        &:checked~.checkmark::before {
+                            content: '\2716'; // Unicode voor kruis
+                            color: $pure-white;
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                    .checkmark {
+                        height: 1.5rem;
+                        width: 1.5rem;
+                        background-color: #aaa;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }    
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+            height: 2.5rem;
+            font-size: 1.2rem;
+            color: $pure-white;
+            background-color: $tertiary-color;
+            border: none;
+            transition: all .3s;
+
+
+            &:hover {
+                background-color: rgba($tertiary-color, .5);
+                color: $pure-black;
+                transform: scale(.98);
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+.faq-container {
+    min-height: 90vh;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+
+    &.dimmed {
+        .question {
+            transition: all .2s ease-in-out;
+            background-color: rgba($tertiary-color, .6);
+
+        }
+    }
+
+    &.active {
+        height: auto;
+
+        .question {
+            background-color: rgba($secondary-color, .8);
+
+        }
+
+        .answer {
+            display: block;
+        }
+    }
+}
+
+.question {
+    font-size: 1.2rem;
+    padding: 15px;
+    color: $pure-white;
+    transition: all .3s ease-in-out;
+    background-color: rgba($tertiary-color, .8);
+    cursor: pointer;
+
+}
+
+.answer {
+    font-family: $font-spectral;
+    color: $secondary-color;
+    padding: 15px;
+    display: none;
 }

@@ -23,6 +23,22 @@ $font-spectral: 'Spectral', serif;
 
 // MIXINS
 
+// CALENDAR
+
+:root {
+    --fc-button-bg-color: #184B6F;
+    --fc-button-hover-bg-color: #151B45;
+    --fc-button-active-bg-color: #151B45;
+
+    --fc-button-active-border-color: #151B45;
+    --fc-button-hover-border-color: none;
+    --fc-button-border-color: none;
+
+    --fc-today-bg-color:#f375211f;
+
+    --fc-event-bg-color: #F37521;
+    // --fc-daygrid-event-dot-width: 5px;
+  }
 
 * {
     font-family: $font-staatliches;
@@ -39,3 +55,8 @@ html {
     }
 }
 
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

@@ -1,3 +1,15 @@
+@charset "UTF-8";
+:root {
+  --fc-button-bg-color: #184B6F;
+  --fc-button-hover-bg-color: #151B45;
+  --fc-button-active-bg-color: #151B45;
+  --fc-button-active-border-color: #151B45;
+  --fc-button-hover-border-color: none;
+  --fc-button-border-color: none;
+  --fc-today-bg-color:#f375211f;
+  --fc-event-bg-color: #F37521;
+}
+
 * {
   font-family: "staatliches", sans-serif;
   margin: 0;
@@ -10,6 +22,12 @@ html {
 }
 html ::-webkit-scrollbar {
   display: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .header {
@@ -162,6 +180,18 @@ html ::-webkit-scrollbar {
   color: #184B6F;
 }
 
+.kalender {
+  margin: 0 auto;
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.kalender-container {
+  width: 100%;
+  height: 85vh;
+}
+
 .main {
   height: 90vh;
   width: 100%;
@@ -242,6 +272,8 @@ html ::-webkit-scrollbar {
 .section {
   height: 100vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .section-logocontainer {
   display: flex;
@@ -298,26 +330,41 @@ html ::-webkit-scrollbar {
   letter-spacing: 1px;
   font-size: 3rem;
 }
+.takwerking-text-para-verhuur {
+  margin-bottom: 1.5rem;
+}
 .takwerking-text-para p {
   margin: 1rem 0;
   font-family: "Spectral", serif;
   line-height: 2rem;
   text-align: justify;
 }
-.takwerking-takken {
+.takwerking-text-para p a {
+  font-family: "Spectral", serif;
+  color: #F37521;
+  text-decoration: none;
+}
+.takwerking-text-para p span {
+  font-weight: 900;
+  font-family: "Spectral", serif;
+  font-variant-caps: all-small-caps;
+  font-size: 1.5rem;
+  color: #151B45;
+}
+.takwerking-imggrid {
   height: 100%;
   width: 40%;
   display: flex;
   justify-content: flex-end;
 }
-.takwerking-takken-container {
+.takwerking-imggrid-container {
   width: 75%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
 }
-.takwerking-takken-container-img {
+.takwerking-imggrid-container-img {
   position: relative;
   width: 12rem;
   height: 12rem;
@@ -328,7 +375,7 @@ html ::-webkit-scrollbar {
   background-color: #fff;
   transition: transform 0.2s cubic-bezier(0.83, 0, 0.17, 1);
 }
-.takwerking-takken-container-img h1 {
+.takwerking-imggrid-container-img h1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -344,14 +391,14 @@ html ::-webkit-scrollbar {
   opacity: 0;
   transition: opacity 0.2s cubic-bezier(0.83, 0, 0.17, 1);
 }
-.takwerking-takken-container-img img {
+.takwerking-imggrid-container-img img {
   width: 50%;
 }
-.takwerking-takken-container-img:hover {
+.takwerking-imggrid-container-img:hover {
   transform: scale(1.2);
   transition: transform 0.2s cubic-bezier(0.83, 0, 0.17, 1);
 }
-.takwerking-takken-container-img:hover h1 {
+.takwerking-imggrid-container-img:hover h1 {
   transition: opacity 0.2s cubic-bezier(0.83, 0, 0.17, 1);
   opacity: 1;
 }
@@ -422,7 +469,8 @@ html ::-webkit-scrollbar {
 .events-event-info {
   display: flex;
 }
-.events-event-info:nth-child(even) {
+.events-event-inforight {
+  display: flex;
   flex-direction: row-reverse;
 }
 .events-upcoming {
@@ -430,7 +478,6 @@ html ::-webkit-scrollbar {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid red;
 }
 .events-upcoming-header {
   width: 100%;
@@ -441,14 +488,13 @@ html ::-webkit-scrollbar {
 }
 .events-upcoming-header-head {
   font-size: 5rem;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   color: #151B45;
 }
 .events-upcoming-text {
-  padding-left: 12rem;
-  width: 40%;
+  padding: 12rem;
+  width: 45%;
   height: 75vh;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -458,23 +504,21 @@ html ::-webkit-scrollbar {
   text-align: justify;
 }
 .events-upcoming-image {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 55%;
   height: 75vh;
 }
 .events-upcoming-image img {
   border-radius: 10px;
-  width: 60%;
+  width: 65%;
   box-shadow: 0 0 25px #000;
 }
 .events-other {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid red;
 }
 .events-other-header {
   width: 100%;
@@ -482,18 +526,16 @@ html ::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
 }
 .events-other-header-head {
   font-size: 5rem;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   color: #151B45;
 }
 .events-other-text {
-  padding-left: 12rem;
-  width: 40%;
-  height: 85vh;
-  border: 1px solid red;
+  padding: 12rem;
+  width: 45%;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -503,17 +545,220 @@ html ::-webkit-scrollbar {
   text-align: justify;
 }
 .events-other-image {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 85vh;
+  width: 55%;
+  height: 90vh;
 }
 .events-other-image img {
   border-radius: 10px;
   width: 60%;
   box-shadow: 0 0 25px #000;
+}
+
+.formulier {
+  width: 60%;
+  flex-direction: column;
+  align-items: center;
+  margin: 0rem auto;
+}
+.formulier-head {
+  color: #151B45;
+  font-size: 3rem;
+}
+.formulier-form {
+  width: 40%;
+}
+.formulier-form label {
+  font-size: 1.2rem;
+  color: #184B6F;
+  letter-spacing: 1px;
+}
+.formulier-form .lightlabel {
+  font-size: 1rem;
+  font-family: "Spectral", serif;
+}
+.formulier-form-item {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+.formulier-form-item input {
+  font-family: "Spectral", serif;
+  font-size: 1rem;
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+.formulier-form-item input:focus {
+  border-color: #F37521;
+}
+.formulier-form-item .contactgegevens {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.formulier-form-item .contactgegevens-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0 0;
+}
+.formulier-form-item .contactgegevens-item label {
+  font-family: "Spectral", serif;
+}
+.formulier-form-item .contactgegevens-item input {
+  width: 100%;
+}
+.formulier-form .geboortedatum {
+  flex-direction: column;
+}
+.formulier-form .geboortedatum .datum {
+  display: flex;
+  justify-content: space-between;
+}
+.formulier-form .geboortedatum .datum-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+.formulier-form .geboortedatum .datum-item label {
+  font-family: "Spectral", serif;
+}
+.formulier-form .geboortedatum input {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+}
+.formulier-form .woonplaats {
+  display: flex;
+  flex-direction: column;
+}
+.formulier-form .woonplaats-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0 0;
+}
+.formulier-form .woonplaats-item-last {
+  display: flex;
+  justify-content: space-between;
+}
+.formulier-form .woonplaats-item-last-nrgm {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.formulier-form .woonplaats-item-last-nrgm input {
+  width: 100%;
+}
+.formulier-form .social label {
+  font-size: 1.15rem;
+}
+.formulier-form .social-answers {
+  display: flex;
+}
+.formulier-form .social-answers select {
+  width: 100%;
+  font-family: "Spectral", serif;
+  font-size: 1rem;
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+.formulier-form .social-answers-answer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0 0;
+}
+.formulier-form .social-answers-answer:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.formulier-form .social-answers-answer label {
+  margin: 0 0.5rem;
+  font-size: 1.75rem;
+  font-variant: all-small-caps;
+}
+.formulier-form .social-answers-answer input {
+  position: absolute;
+  opacity: 0;
+  width: 1.3rem;
+  cursor: pointer;
+}
+.formulier-form .social-answers-answer input:checked ~ .checkmark {
+  background-color: #184B6F;
+}
+.formulier-form .social-answers-answer input:checked ~ .checkmark::before {
+  content: "✖";
+  color: #fff;
+  font-size: 1.2rem;
+}
+.formulier-form .social-answers-answer .checkmark {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formulier-form button {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #F37521;
+  border: none;
+  transition: all 0.3s;
+}
+.formulier-form button:hover {
+  background-color: rgba(243, 117, 33, 0.5);
+  color: #000;
+  transform: scale(0.98);
+  transition: all 0.3s;
+}
+
+.faq-container {
+  min-height: 90vh;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+.faq-item.dimmed .question {
+  transition: all 0.2s ease-in-out;
+  background-color: rgba(243, 117, 33, 0.6);
+}
+.faq-item.active {
+  height: auto;
+}
+.faq-item.active .question {
+  background-color: rgba(24, 75, 111, 0.8);
+}
+.faq-item.active .answer {
+  display: block;
+}
+
+.question {
+  font-size: 1.2rem;
+  padding: 15px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(243, 117, 33, 0.8);
+  cursor: pointer;
+}
+
+.answer {
+  font-family: "Spectral", serif;
+  color: #184B6F;
+  padding: 15px;
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

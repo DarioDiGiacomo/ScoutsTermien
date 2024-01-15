@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Spectral:wght@300;400;700;800&family=Staatliches&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>Scouts Termien</title>
     <link rel="icon" type="image/x-icon" href="assets/Scouts Termien Icon White.svg">
+    <script defer src="main.js"></script>
 </head>
 
 <body>
@@ -39,83 +42,94 @@
             </ul>
         </nav>
     </div>
-    <div class="main">
-        <div class="main-text">
-            <h1 class="main-text-prim"><span>Welkom!</span> Wij zijn</h1>
-            <h1 class="main-text-sec">Scouts Termien</h1>
-            <div class="main-text-par">
-                <p class="main-text-par-paratext">Elke zondag van 14u tot 17u zorgt de leiding voor spetterende
-                    activiteiten voor de leden. Dit vindt
-                    plaats aan onze lokalen op de Melbergstraat 7 in genk. Wij hopen jullie snel te zien!
-                    Buiten deze zondagen organiseren wij ook verschillende evenementen zoals onze jaarlijkse
-                    nieuwjaarstocht, het paashaastornooi en onze spaghetti dag. Elk jaar in de zomer gaan wij op kamp in
-                    de
-                    Ardenne om onze leden een onvergetelijke ervaring mee te geven.
-                <p>Is dit iets voor jou? Kom dan zeker eens proberen.</p>
-                <p>Een stevige Linker, De leiding</p>
-
-                <p>Heb je vragen? Stuur ons zeker <a href="scouts_termien@hotmail.com">een mailtje.</a></p>
-                </p>
+    <div class="main formulier">
+        <h1 class="formulier-head">Inschrijving '23 - '24</h1>
+        <form class="formulier-form" method="post" action="https://sheetdb.io/api/v1/ly68qon8lg5s3" id="sheetdb-form">
+            <div class="formulier-form-item">
+                <label for="Naam">Naam van het kind</label>
+                <input type="text" name="Naam" id="Naam">
             </div>
-        </div>
-
-        <div class="main-image">
-            <img class="main-image-indexpage" src="assets/main-vuur.jpg" alt="vuur op kamp 2023">
-        </div>
-    </div>
-    <div class="section">
-        <div class="section-logocontainer">
-            <img class="section-logocontainer-logo" src="assets/PHT logo Black.svg" alt="paashaastornooi Logo">
-        </div>
-        <div class="section-wrap">
-            <div class="section-wrap-imgcontainer">
-                <img src="assets/IMG_5734.jpg" alt="paashaastornooi image">
+            <div class="formulier-form-item geboortedatum">
+                <label for="Geboortedatum">Geboortedatum</label>
+                <div class="datum">
+                    <div class="datum-item">
+                        <label class="lightlabel" for="Geboortedatum-dag">Dag</label>
+                        <input type="number" maxlength="2" name="Geboortedatum-dag" pattern="\d{2,2}" placeholder="dd"
+                            id="geboortedatum" data-auto-tab>
+                    </div>
+                    <div class="datum-item">
+                        <label class="lightlabel" for="Geboortedatum-maand">Maand</label>
+                        <input type="number" maxlength="2" name="Geboortedatum-maand" pattern="\d{2,2}" placeholder="mm"
+                            id="geboortedatum" data-auto-tab>
+                    </div>
+                    <div class="datum-item">
+                        <label class="lightlabel" for="Geboortedatum-jaar">Jaar</label>
+                        <input type="number" maxlength="4" name="Geboortedatum-jaar" pattern="\d{4,4}"
+                            placeholder="jjjj" id="geboortedatum" data-auto-tab>
+                    </div>
+                </div>
             </div>
-            <div class="section-wrap-textcontainer">
-                <p class="section-wrap-textcontainer-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et
-                    velit reiciendis quibusdam error enim nihil eius aliquid illo impedit illum. Dolores, sint deserunt.
-                    Optio aliquid doloremque distinctio iusto sunt placeat! Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Totam qui sint debitis reprehenderit, magni provident illum numquam
-                    exercitationem, atque et possimus illo ducimus libero omnis soluta quis facere odio! Delectus.</p>
-                <p class="section-wrap-textcontainer-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Neque, voluptas delectus saepe asperiores atque distinctio harum veritatis, beatae magni aliquid
-                    error quam at sapiente aliquam, corrupti molestias ducimus nostrum dolorem!Lorem ipsum dolor sit,
-                    amet consectetur adipisicing elit. Et velit reiciendis quibusdam error enim nihil eius aliquid illo
-                    impedit illum. Dolores, sint deserunt. Optio aliquid doloremque distinctio iusto sunt placeat! Lorem
-                    ipsum dolor sit amet consectetur, adipisicing elit. Totam qui sint debitis reprehenderit, magni
-                    provident illum numquam exercitationem, atque et possimus illo ducimus libero omnis soluta quis
-                    facere odio! Delectus.</p>
+            <div class="formulier-form-item">
+                <label for="Ouder">Contactgegevens</label>
+                <div class="contactgegevens">
+                    <div class="contactgegevens-item">
+                        <label class="lightlabel" for="Ouder">Naam van ouder/voogd</label>
+                        <input type="text" name="Ouder" id="ouder">
+                    </div>
+                    <div class="contactgegevens-item">
+                        <label class="lightlabel" for="Telefoon">Telefoonnummer</label>
+                        <input type="tel" placeholder="+32" value="+32" name="Telefoon" id="telefoon">
+                    </div>
+                    <div class="contactgegevens-item">
+                        <label class="lightlabel" for="Email">E-mail</label>
+                        <input type="email" name="Email" id="email">
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="gallery">
-        <h1 class="gallery-text">More Images</h1>
-        <div class="gallery-grid">
-            <div class="gallery-image">
-                <img src="assets/IMG_5663.jpg" alt="image gallery">
+            <div class="formulier-form-item">
+                <label for="Woonplaats">Woonplaats</label>
+                <div class="woonplaats">
+                    <div class="woonplaats-item">
+                        <label class="lightlabel" for="Woonplaats-straat">Straat</label>
+                        <input type="text" name="Woonplaats-straat" id="woonplaats">
+                    </div>
+                    <div class="woonplaats-item">
+                        <div class="woonplaats-item-last">
+                            <div class="woonplaats-item-last-nrgm">
+                                <label class="lightlabel" for="Woonplaats-nummer">Nr</label>
+                                <input type="number" name="Woonplaats-nummer" id="woonplaats">
+                            </div>
+                            <div class="woonplaats-item-last-nrgm">
+                                <label class="lightlabel" for="Woonplaats-gemeente">Gemeente</label>
+                                <input type="text" name="Woonplaats-gemeente" id="woonplaats">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="gallery-image">
-                <img src="assets/IMG_5734.jpg" alt="image gallery">
+            <div class="formulier-form-item">
+                <div class="social">
+                    <label for="SocialMedia">Wij Hebben recht om foto's te plaatsen op sociale media:</label>
+                    <div class="social-answers">
+                        <!-- <select name="SocialMedia">
+                            <option value="Ja">Ja</option>
+                            <option value="Nee">Nee</option>
+                        </select> -->
+                        <div class="social-answers-answer container">
+                                <input type="radio" id="ja" name="SocialMedia" value="Ja">
+                                <div class="checkmark"></div>
+                                <label>JA</label>
+                            </div>
+                            <div class="social-answers-answer">
+                                <input type="radio" id="nee" name="SocialMedia" value="Nee">
+                                <div class="checkmark"></div>
+                                <label>NEE</label>
+                            </div>
+                    </div>
+                </div>
             </div>
-            <div class="gallery-image">
-                <img src="assets/IMG_5891.jpg" alt="image gallery">
-            </div>
-            <div class="gallery-image">
-                <img src="assets/IMG_6026.jpg" alt="image gallery">
-            </div>
-            <div class="gallery-image">
-                <img src="assets/IMG_6026.jpg" alt="image gallery">
-            </div>
-            <div class="gallery-image">
-                <img src="assets/IMG_6026.jpg" alt="image gallery">
-            </div>
-            <div class="gallery-image">
-                <img src="assets/IMG_6026.jpg" alt="image gallery">
-            </div>
-            <div class="gallery-image">
-                <img src="assets/IMG_6026.jpg" alt="image gallery">
-            </div>
-        </div>
+            <button>Verzenden</button>
+        </form>
     </div>
     <footer class="footer">
         <div class="footer-main">
@@ -128,7 +142,7 @@
         </div>
         <div class="footer-nav">
             <h1 class="footer-nav-head">Zoek je deze?</h1>
-            <a class="footer-nav-link" href="#"><p class="footer-nav-link-text">Takwerking</p></a>
+            <a class="footer-nav-link" href="faq.html"><p class="footer-nav-link-text">FAQ</p></a>
             <a class="footer-nav-link" href="#"><p class="footer-nav-link-text">Events</p></a>
             <a class="footer-nav-link" href="#"><p class="footer-nav-link-text">Verhuur</p></a>
         </div>

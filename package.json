@@ -1,11 +1,14 @@
 {
   "dependencies": {
+    "@fullcalendar/core": "^6.1.10",
+    "@fullcalendar/daygrid": "^6.1.10",
+    "browserify": "^17.0.0",
+    "fullcalendar": "^6.1.10",
     "sass": "^1.69.5"
   },
   "name": "scoutstermien",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "dev": "sass --watch scss/main.scss:css/main.css"
   },
