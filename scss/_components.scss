@@ -13,6 +13,7 @@
         display: flex;
         align-items: center;
 
+
         &-logo {
             width: 15%;
             margin-left: 1.25rem;
@@ -24,13 +25,24 @@
         width: 50%;
         display: flex;
         justify-content: flex-end;
+        
+
+        &:hover a:not(:hover) {
+            opacity: .4;
+            color: $secondary-color;
+            transition: .3s ease-in-out;
+        }
+
 
         ul {
             display: flex;
             justify-content: center;
             align-items: center;
 
+
+
             a {
+                transition: .3s ease-in-out;
                 position: relative;
                 text-decoration: none;
                 font-size: 1.5rem;
@@ -173,6 +185,12 @@
         &-icon {
             margin: 1rem;
             color: $secondary-color;
+            transition: .2s ease-in-out;
+
+            &:hover {
+                transition: .2s ease-in-out;
+                color: $tertiary-color;
+            }
         }
     }
 }

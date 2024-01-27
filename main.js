@@ -81,6 +81,27 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('success')
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        headerToolbar: {
+            left: 'dayGridMonth dayGridWeek dayGridDay list',
+            center: 'title',
+            right: 'prev today next'
+        },
+        events: [{
+            title: 'PAASHAASTORNOOI',
+            start: '2024-03-30T12:00',
+            end: '2024-04-02T23:00',
+            color: 'green'
+        }],
+        height: '100%',
+        locale: 'esLocale',
+    });
+    calendar.render();
+});
   
 
   

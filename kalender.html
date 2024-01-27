@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Anton&family=Spectral:wght@300;400;700;800&family=Staatliches&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Scouts Termien</title>
+    <title>Kalender | Scouts Termien</title>
     <link rel="icon" type="image/x-icon" href="assets/Scouts Termien Icon White.svg">
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.10/index.global.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
@@ -24,22 +24,47 @@
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
+                firstDay: 1, 
+                eventClick: function (info) {
+                    info.jsEvent.preventDefault(); // don't let the browser navigate
+                    if (info.event.url) {
+                        window.open(info.event.url);
+                    }
+                },
                 headerToolbar: {
                     left: 'dayGridMonth dayGridWeek dayGridDay list',
                     center: 'title',
                     right: 'prev today next'
                 },
                 events: [{
-                    title: 'PAASHAASTORNOOI',
-                    start: '2024-03-30T12:00',
-                    end: '2024-04-02T23:00',
-                    color: 'green'
+                    display: 'block',
+                    title: 'Jenevertocht',
+                    start: '2024-01-06T19:00',
+                    color: '#184B6F',
+                    url: 'events.html#paashaastornooi'
                 },
                 {
-                    title: 'PAASHAASTORNOOI',
-                    start: '2023-12-06T12:30',
-                    end: '2023-12-06T23:15',
-                    color: 'green'
+                    title: 'PaasHaasTornooi',
+                    start: '2024-03-30T09:00',
+                    end: '2024-04-01T23:59',
+                    color: '#184B6F',
+                    url: 'events.html#paashaastornooi'
+                },
+                {
+                    display: 'block',
+                    title: 'Rommelmarkt',
+                    start: '2024-04-20T12:00',
+                    color: '#184B6F',
+                    // textColor: 'white',
+                    url: 'events.html#rommelmarkt'
+                },
+                {
+                    display: 'block',
+                    title: 'Spaghettidag',
+                    start: '2024-05-05T12:00',
+                    color: '#184B6F',
+                    // textColor: 'white',
+                    url: 'events.html#rommelmarkt'
                 }],
                 height: '100%',
                 locale: 'esLocale',
@@ -95,8 +120,9 @@
             <a class="footer-nav-link" href="#"><p class="footer-nav-link-text">Verhuur</p></a>
         </div>
         <div class="footer-socials">
-            <i class="fa-brands fa-square-facebook footer-socials-icon fa-2xl"></i>
-            <i class="fa-brands fa-square-instagram footer-socials-icon fa-2xl"></i>
+            <a href="https://www.facebook.com/scoutstermien" target="_blank"><i class="fa-brands fa-facebook-f footer-socials-icon fa-xl"></i></a>
+            <a href="https://www.instagram.com/paashaastornooi" target="_blank"><i class="fa-brands fa-tiktok footer-socials-icon fa-xl"></i></a>
+            <a href="https://www.tiktok.com/@paashaastornooi" target="_blank"><i class="fa-brands fa-instagram footer-socials-icon fa-xl"></i></a>
         </div>
     </footer>
 </body>
