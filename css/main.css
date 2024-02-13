@@ -116,10 +116,9 @@ input[type=number]::-webkit-inner-spin-button {
 .menu-toggle {
   display: none;
   transform: translate(0%, -50%);
-  padding: 1em;
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: 0;
   cursor: pointer;
   z-index: 999;
 }
@@ -558,7 +557,9 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .section-upcoming-image img {
   border-radius: 10px;
-  width: 80%;
+  max-width: 800px;
+  aspect-ratio: 1.5555555556;
+  object-fit: cover;
   box-shadow: 0 0 25px #000;
 }
 .section-upcoming > .section-event:nth-child(1) .section-event-info {
@@ -1109,7 +1110,7 @@ input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1366px) {
   .main-image img {
     border-radius: 10px;
     max-width: 400px;
@@ -1210,6 +1211,9 @@ input[type=number]::-webkit-inner-spin-button {
   .header-image-logo img {
     width: 70%;
   }
+  .faq-container {
+    max-width: 80%;
+  }
   .menu {
     width: 100%;
     height: 0;
@@ -1271,16 +1275,16 @@ input[type=number]::-webkit-inner-spin-button {
   .main-text {
     width: 100%;
     padding: 0rem 6rem;
-    height: 50%;
+    height: 40%;
   }
   .main-image {
     width: 100%;
-    height: 50%;
+    height: 40%;
     padding: 0rem;
   }
   .main-image img {
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 800px;
     aspect-ratio: 1.5555555556;
     object-fit: cover;
     box-shadow: 0 0 25px #000;
@@ -1293,7 +1297,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
   .section-wrap-imgcontainer img {
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 800px;
     aspect-ratio: 1.5555555556;
     object-fit: cover;
     box-shadow: 0 0 25px #000;
@@ -1301,6 +1305,9 @@ input[type=number]::-webkit-inner-spin-button {
   .section-wrap-textcontainer {
     padding: 6rem 0;
     width: 100%;
+  }
+  .section-logocontainer-logo {
+    width: 40%;
   }
   .section-event-info {
     flex-direction: column;
@@ -1310,19 +1317,19 @@ input[type=number]::-webkit-inner-spin-button {
   }
   .section-upcoming-text {
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     height: 20%;
-  }
-  .section-upcoming-text-para {
-    font-family: "Spectral", serif;
-    text-align: justify;
   }
   .section-upcoming-image {
     width: 100%;
     height: 50%;
   }
   .section-upcoming-image img {
-    width: 70%;
+    border-radius: 10px;
+    max-width: 800px;
+    aspect-ratio: 1.5555555556;
+    object-fit: cover;
+    box-shadow: 0 0 25px #000;
   }
   .section-upcoming > .section-event:nth-child(1) .section-event-info {
     height: 90vh;
@@ -1347,9 +1354,11 @@ input[type=number]::-webkit-inner-spin-button {
     flex-direction: column;
   }
   .verhuur-text {
+    height: 35%;
     width: 100%;
   }
   .verhuur-imggrid {
+    height: 60%;
     width: 100%;
   }
   .verhuur-imggrid-container {
@@ -1381,6 +1390,196 @@ input[type=number]::-webkit-inner-spin-button {
     /* Centreert de galerij op de pagina */
     justify-content: center;
     align-items: center;
+  }
+}
+@media screen and (max-width: 820px) {
+  .section-wrap {
+    flex-direction: column;
+  }
+  .section-wrap-imgcontainer {
+    width: 100%;
+  }
+  .section-wrap-imgcontainer img {
+    border-radius: 10px;
+    max-width: 600px;
+    aspect-ratio: 1.5555555556;
+    object-fit: cover;
+    box-shadow: 0 0 25px #000;
+  }
+  .section-logocontainer-logo {
+    width: 60%;
+  }
+  .section-upcoming-text {
+    margin: 0 auto;
+    width: 90%;
+    height: 30%;
+  }
+  .section-upcoming-image {
+    width: 100%;
+    height: 40%;
+  }
+  .section-upcoming-image img {
+    border-radius: 10px;
+    max-width: 600px;
+    aspect-ratio: 1.5555555556;
+    object-fit: cover;
+    box-shadow: 0 0 25px #000;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .main-text {
+    width: 100%;
+    padding: 0rem 6rem;
+    height: 50%;
+  }
+  .main-image {
+    width: 100%;
+    height: 40%;
+    padding: 0rem;
+  }
+  .main-image img {
+    border-radius: 10px;
+    max-width: 600px;
+    aspect-ratio: 1.5555555556;
+    object-fit: cover;
+    box-shadow: 0 0 25px #000;
+  }
+}
+@media screen and (max-width: 430px) {
+  .main {
+    flex-direction: column;
+  }
+  .main-text {
+    width: 100%;
+    padding: 0rem 2rem;
+    height: 60%;
+  }
+  .main-text-prim {
+    line-height: 3rem;
+  }
+  .main-text-sec {
+    line-height: 3rem;
+    font-size: 2rem;
+  }
+  .main-text-par {
+    margin-top: 0rem;
+  }
+  .main-image {
+    width: 100%;
+    height: 40%;
+    padding: 0rem;
+  }
+  .main-image img {
+    border-radius: 10px;
+    max-width: 350px;
+    aspect-ratio: 1.5555555556;
+    object-fit: cover;
+    box-shadow: 0 0 25px #000;
+  }
+  .section-wrap {
+    flex-direction: column;
+  }
+  .section-wrap-imgcontainer {
+    width: 100%;
+    height: 50%;
+  }
+  .section-wrap-imgcontainer img {
+    border-radius: 10px;
+    max-width: 350px;
+    aspect-ratio: 1.5555555556;
+    object-fit: cover;
+    box-shadow: 0 0 25px #000;
+  }
+  .section-wrap-textcontainer {
+    overflow-y: scroll;
+    justify-content: flex-start;
+    height: 50%;
+    padding: 1rem 0;
+  }
+  .section-upcoming-text {
+    padding: 1rem;
+    width: 90%;
+    height: 30%;
+    overflow-y: scroll;
+    align-items: flex-start;
+  }
+  .section-upcoming-header-head {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    color: #151B45;
+  }
+  .section-upcoming-image {
+    width: 100%;
+    height: 40%;
+  }
+  .section-upcoming-image img {
+    border-radius: 10px;
+    max-width: 350px;
+    aspect-ratio: 1.5555555556;
+    object-fit: cover;
+    box-shadow: 0 0 25px #000;
+  }
+  .fc-toolbar .fc-today-button,
+  .fc-toolbar .fc-dayGridDay-button,
+  .fc-toolbar .fc-list-button {
+    display: none;
+  }
+  .fc-toolbar .fc-toolbar-title {
+    font-size: 1rem;
+  }
+  .kalender-container {
+    height: 50%;
+    /* Pas deze hoogte aan zoals gewenst */
+    overflow-y: auto;
+    /* Voeg een verticale scroll toe als de kalender de hoogte overschrijdt */
+  }
+  .gallery {
+    padding: 3rem 0;
+  }
+  .footer {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .takwerking {
+    padding: 0rem 2rem;
+  }
+  .takwerking-text {
+    padding: 0 1rem;
+    width: 100%;
+  }
+  .takwerking-text-para {
+    overflow-y: scroll;
+  }
+  .takwerking-imggrid {
+    overflow-y: scroll;
+    justify-content: flex-start;
+  }
+  .takwerking-imggrid-container {
+    gap: 0.5rem;
+  }
+  .formulier-head {
+    font-size: 2rem;
+  }
+  .formulier-form {
+    justify-content: flex-start;
+    overflow-y: scroll;
+  }
+  .formulier-form-item {
+    margin: 0.75rem 0;
+  }
+  .verhuur {
+    padding: 0rem 2rem;
+  }
+  .verhuur-text {
+    padding: 0 1rem;
+    width: 100%;
+  }
+  .verhuur-text-para {
+    overflow-y: scroll;
+  }
+  .verhuur-imggrid {
+    margin: 1rem 0;
   }
 }
 

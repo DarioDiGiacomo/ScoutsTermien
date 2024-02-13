@@ -215,6 +215,7 @@
     }
 
     &-event {
+        
         width: 100%;
 
         &-info {
@@ -269,10 +270,7 @@
             height: 100%;
 
             img {
-                border-radius: 10px;
-                width: 80%;
-                box-shadow: 0 0 25px $pure-black;
-
+                @include image(800px, 14 / 9);
             }
 
         }
