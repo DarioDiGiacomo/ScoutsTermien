@@ -1,0 +1,357 @@
+@use 'base' as *;
+
+@media screen and (max-width: 1180px) {
+
+    .main {
+        &-image {
+            img {
+                @include image(400px, 9 / 12);
+            }
+        }
+
+        &-text {
+            &-prim {
+                line-height: 3.5rem;
+            }
+
+            &-sec {
+                line-height: 3.5rem;
+                font-size: 4rem;
+            }
+        }
+    }
+
+    .section {
+        &-wrap {
+            &-imgcontainer {
+                img {
+                    @include image(400px, 9 / 12);
+                }
+            }
+        }
+    }
+
+    .takwerking {
+        padding: 2.5rem 5rem;
+        flex-direction: column;
+
+        &-text {
+            width: 100%;
+            height: 80%;
+
+            &-para {
+                width: 100%;
+            }
+        }
+
+        &-imggrid {
+            width: 100%;
+            height: 20%;
+
+            &-container {
+                grid-template-columns: repeat(6, 1fr); // width: 75%
+
+                &-img {
+                    width: 6rem;
+                    height: 6rem;
+                    background-size: 4.5rem;
+                }
+            }
+        }
+
+        .givers {
+            background-size: 4rem;
+        }
+    }
+
+    .formulier {
+        width: 60%;
+        flex-direction: column;
+        align-items: center;
+        margin: 0rem auto;
+
+        &-form {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                margin: .25rem 0;
+            }
+        }
+    }
+
+    .verhuur {
+        padding: 2.5rem 5rem;
+
+        &-imggrid {
+            height: 100%;
+            width: 40%;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+
+            &-container {
+                overflow-y: scroll;
+                scroll-snap-type: y mandatory;
+                scroll-padding: 10rem;
+                height: 100%;
+                grid-template-columns: repeat(1, 1fr); // width: 75%
+
+                &-img {
+
+                    img {
+                        width: 20rem;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .lightbox img {
+        max-width: 70%;
+        max-height: 70%;
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 1rem 2rem;
+
+        &-nav {
+            ul {
+                display: none;
+            }
+        }
+
+        &-image {
+            &-logo {
+                img {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    .menu {
+        width: 100%;
+        height: 0;
+        /* Start met een hoogte van 0 */
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        overflow: hidden;
+        /* Zorg ervoor dat de inhoud wordt verborgen wanneer de hoogte 0 is */
+        transition: height .5s ease-in-out;
+        /* Voeg een overgang toe voor een soepele animatie */
+
+        ul {
+            transition: opacity 0.5s ease-in-out;
+            z-index: 998;
+            flex-wrap: nowrap;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+
+            &:hover a:not(:hover) {
+                opacity: 1;
+                color: $pure-white;
+            }
+
+            a {
+                letter-spacing: 1px;
+                font-size: 2rem;
+                height: auto;
+                color: $pure-white;
+            }
+        }
+
+        &.open {
+            height: 100%;
+            transition: height .5s ease-in-out;
+            /* Wanneer de navigatie wordt geopend, stel de hoogte in op auto om alle inhoud weer te geven */
+        }
+    }
+
+
+
+    .backdrop {
+        z-index: 998;
+        transition: height 0.5s ease-in-out;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+
+        &.open {
+            height: 100%;
+            transition: height 0.5s ease-in-out;
+        }
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main {
+        flex-direction: column;
+
+        &-text {
+            width: 100%;
+            padding: 0rem 6rem;
+            height: 50%;
+        }
+
+        &-image {
+            width: 100%;
+            height: 50%;
+            padding: 0rem;
+
+            img {
+                @include image(600px, 14 / 9);
+            }
+        }
+    }
+
+    .section {
+        &-wrap {
+            flex-direction: column;
+
+            &-imgcontainer {
+                width: 100%;
+
+                img {
+                    @include image(600px, 14 / 9);
+                }
+            }
+
+            &-textcontainer {
+                padding: 6rem 0;
+                width: 100%;
+            }
+        }
+
+        &-event {
+
+            &-info {
+                flex-direction: column;
+            }
+
+
+            .right {
+                flex-direction: column;
+            }
+        }
+
+        &-upcoming {
+            &-text {
+                margin: 0 auto;
+                width: 90%;
+                height: 20%;
+
+                &-para {
+                    font-family: $font-spectral;
+                    text-align: justify;
+                }
+            }
+
+            &-image {
+
+                width: 100%;
+                height: 50%;
+
+                img {
+                    width: 70%;
+                }
+
+            }
+        }
+
+        &-upcoming>.section-event:nth-child(1) {
+            .section-event-info {
+                height: 90vh;
+            }
+        }
+    }
+
+    .formulier {
+        align-items: center;
+        width: 70%;
+
+        &-form {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+
+                margin: 1rem 0;
+            }
+        }
+    }
+
+    .verhuur {
+        flex-direction: column;
+
+        &-text {
+            width: 100%;
+        }
+
+        &-imggrid {
+            width: 100%;
+
+            &-container {
+                grid-template-columns: repeat(6, 1fr); // width: 75%
+
+                &-img {
+                    img {
+                        object-fit: cover;
+                        width: 30rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .gallery {
+        padding: 4rem 0;
+
+        &-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 10vh;
+        }
+
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* Maakt een dynamisch grid */
+            gap: 1rem;
+            /* Voegt ruimte tussen de afbeeldingen toe */
+            max-width: 80%;
+            /* Beperkt de maximale breedte van de galerij */
+            margin: 0 auto;
+            /* Centreert de galerij op de pagina */
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+}

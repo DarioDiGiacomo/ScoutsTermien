@@ -13,15 +13,45 @@
         href="https://fonts.googleapis.com/css2?family=Anton&family=Spectral:wght@300;400;700;800&family=Staatliches&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script defer src="menu.js"></script>
+    <script defer src="main.js"></script>
+    <script defer src="image.js"></script>
     <title>Verhuur | Scouts Termien</title>
     <link rel="icon" type="image/x-icon" href="assets/Scouts Termien Icon White.svg">
 </head>
+
 <body>
     <div class="header">
-        <div class="header-image"><a class="header-image-logo" href="index.html"><img src="assets/Scouts Logo Black.svg"
-                    alt="Scouts Logo"></a></div>
+        <div class="header-image">
+            <a class="header-image-logo" href="index.html"><img src="assets/Scouts Logo Black.svg"
+                    alt="Scouts Logo"></a>
+        </div>
         <nav class="header-nav">
             <ul>
+                <a href="takwerking.html">
+                    <li>Takwerking</li>
+                </a>
+                <a href="events.html">
+                    <li>Events</li>
+                </a>
+                <a href="kalender.html">
+                    <li>Kalender</li>
+                </a>
+                <a href="inschrijvingen.html">
+                    <li>Inschrijven</li>
+                </a>
+                <a href="verhuur.html">
+                    <li>Verhuur</li>
+                </a>
+            </ul>
+
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+        </nav>
+        <div class="backdrop"></div>
+        <nav class="header-nav menu">
+            <ul class="ipad-menu">
                 <a href="takwerking.html">
                     <li>Takwerking</li>
                 </a>
@@ -45,48 +75,44 @@
             <h1 class="verhuur-text-head">Verhuur</h1>
             <d class="verhuur-text-para">
                 <div class="verhuur-text-para-verhuur">
-                <p><span>Dagprijs:</span> € ???,- + tijdens de periode van 1 oktober tot 1 april komt
-                    hier de energieprijs nog bij.</p>
-                <p><span>Weekendprijs:</span> € ???,- + vaste onkosten zoals water, elektriciteit en gas.</p>
-                <p><span>Kampen:</span> € ???/dag+ €??,-/extra geplaatste tent + vaste onkosten + € ???,- (voor
-                    objectieve aansprakelijkheid over de hele periode).</p>
+                    <p><span>Dagprijs:</span> € ???,- + tijdens de periode van 1 oktober tot 1 april komt
+                        hier de energieprijs nog bij.</p>
+                    <p><span>Weekendprijs:</span> € ???,- + vaste onkosten zoals water, elektriciteit en gas.</p>
+                    <p><span>Kampen:</span> € ???/dag+ €??,-/extra geplaatste tent + vaste onkosten + € ???,- (voor
+                        objectieve aansprakelijkheid over de hele periode).</p>
                 </div>
-                <p>Voor vragen of reserveringen kan u altijd <a href="scouts_termien@hotmail.com">een mailtje</a> achterlaten.</p>
+                <p>Voor vragen of reserveringen kan u altijd <a href="scouts_termien@hotmail.com">een mailtje</a>
+                    achterlaten.</p>
         </div>
         <div class="verhuur-imggrid">
             <div class="verhuur-imggrid-container">
-                <a href="kapoenen.html">
-                    <div class="verhuur-imggrid-container-img">
-                        <img src="assets/Kapoenen.jpg" alt="kapoenen">
-                    </div>
-                </a>
-                <a href="welpen.html">
-                    <div class="verhuur-imggrid-container-img">
-                        <img src="assets/Welpen.jpg" alt="welpen">
-                    </div>
-                </a>
-                <a href="jonggivers.html">
-                    <div class="verhuur-imggrid-container-img">
-                        <img src="assets/Jong givers.jpg" alt="jong givers">
-                    </div>
-                </a>
-                <a href="givers.html">
-                    <div class="verhuur-imggrid-container-img">
-                        <img src="assets/givers.jpg" alt="givers">
-                    </div>
-                </a>
-                <a href="jins.html">
-                    <div class="verhuur-imggrid-container-img">
-                        <img src="assets/Jins.jpg" alt="Jins">
-                    </div>
-                </a>
-                <a href="leiding.html">
-                    <div class="verhuur-imggrid-container-img">
-                        <img src="assets/Leiding.jpg" alt="Leiding">
-                    </div>
-                </a>
+                <div class="verhuur-imggrid-container-img">
+                    <img src="assets/IMG_5663.jpg" alt="kapoenen">
+                </div>
+                <div class="verhuur-imggrid-container-img">
+                    <img src="assets/IMG_5663.jpg" alt="welpen">
+                </div>
+                <div class="verhuur-imggrid-container-img">
+                    <img src="assets/IMG_5663.jpg" alt="jong givers">
+                </div>
+                <div class="verhuur-imggrid-container-img">
+                    <img src="assets/IMG_5663.jpg" alt="givers">
+                </div>
+                <div class="verhuur-imggrid-container-img">
+                    <img src="assets/IMG_5663.jpg" alt="Jins">
+                </div>
+                <div class="verhuur-imggrid-container-img">
+                    <img src="assets/IMG_5663.jpg" alt="Leiding">
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close" id="close">&times;</span>
+        <span class="prev" id="prev">&#10094;</span>
+        <span class="next" id="next">&#10095;</span>
+        <img src="" id="lightbox-img">
     </div>
 
     <div class="gallery">
@@ -129,14 +155,23 @@
         </div>
         <div class="footer-nav">
             <h1 class="footer-nav-head">Zoek je deze?</h1>
-            <a class="footer-nav-link" href="faq.html"><p class="footer-nav-link-text">FAQ</p></a>
-            <a class="footer-nav-link" href="#"><p class="footer-nav-link-text">Events</p></a>
-            <a class="footer-nav-link" href="#"><p class="footer-nav-link-text">Verhuur</p></a>
+            <a class="footer-nav-link" href="faq.html">
+                <p class="footer-nav-link-text">FAQ</p>
+            </a>
+            <a class="footer-nav-link" href="#">
+                <p class="footer-nav-link-text">Events</p>
+            </a>
+            <a class="footer-nav-link" href="#">
+                <p class="footer-nav-link-text">Verhuur</p>
+            </a>
         </div>
         <div class="footer-socials">
-            <a href="https://www.facebook.com/scoutstermien" target="_blank"><i class="fa-brands fa-facebook-f footer-socials-icon fa-xl"></i></a>
-            <a href="https://www.instagram.com/paashaastornooi" target="_blank"><i class="fa-brands fa-tiktok footer-socials-icon fa-xl"></i></a>
-            <a href="https://www.tiktok.com/@paashaastornooi" target="_blank"><i class="fa-brands fa-instagram footer-socials-icon fa-xl"></i></a>
+            <a href="https://www.facebook.com/scoutstermien" target="_blank"><i
+                    class="fa-brands fa-facebook-f footer-socials-icon fa-l"></i></a>
+            <a href="https://www.instagram.com/paashaastornooi" target="_blank"><i
+                    class="fa-brands fa-tiktok footer-socials-icon fa-l"></i></a>
+            <a href="https://www.tiktok.com/@paashaastornooi" target="_blank"><i
+                    class="fa-brands fa-instagram footer-socials-icon fa-l"></i></a>
         </div>
     </footer>
 </body>

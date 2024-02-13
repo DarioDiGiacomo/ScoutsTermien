@@ -13,17 +13,45 @@
         href="https://fonts.googleapis.com/css2?family=Anton&family=Spectral:wght@300;400;700;800&family=Staatliches&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script defer src="main.js"></script>
+    <script defer src="menu.js"></script>
+    <script defer src="form.js"></script>
     <title>Inschrijvingen | Scouts Termien</title>
     <link rel="icon" type="image/x-icon" href="assets/Scouts Termien Icon White.svg">
-    <script defer src="main.js"></script>
 </head>
 
 <body>
     <div class="header">
-        <div class="header-image"><a class="header-image-logo" href="index.html"><img src="assets/Scouts Logo Black.svg"
-                    alt="Scouts Logo"></a></div>
+        <div class="header-image">
+            <a class="header-image-logo" href="index.html"><img src="assets/Scouts Logo Black.svg"
+                    alt="Scouts Logo"></a>
+        </div>
         <nav class="header-nav">
             <ul>
+                <a href="takwerking.html">
+                    <li>Takwerking</li>
+                </a>
+                <a href="events.html">
+                    <li>Events</li>
+                </a>
+                <a href="kalender.html">
+                    <li>Kalender</li>
+                </a>
+                <a href="inschrijvingen.html">
+                    <li>Inschrijven</li>
+                </a>
+                <a href="verhuur.html">
+                    <li>Verhuur</li>
+                </a>
+            </ul>
+
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+        </nav>
+        <div class="backdrop"></div>
+        <nav class="header-nav menu">
+            <ul class="ipad-menu">
                 <a href="takwerking.html">
                     <li>Takwerking</li>
                 </a>
@@ -147,9 +175,9 @@
             <a class="footer-nav-link" href="#"><p class="footer-nav-link-text">Verhuur</p></a>
         </div>
         <div class="footer-socials">
-            <a href="https://www.facebook.com/scoutstermien" class="footer-socials-icon" target="_blank"><i class="fa-brands fa-facebook-f  fa-xl"></i></a>
-            <a href="https://www.instagram.com/paashaastornooi" class="footer-socials-icon" target="_blank"><i class="fa-brands fa-tiktok fa-xl"></i></a>
-            <a href="https://www.tiktok.com/@paashaastornooi" class="footer-socials-icon" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="https://www.facebook.com/scoutstermien" target="_blank"><i class="fa-brands fa-facebook-f  fa-l footer-socials-icon"></i></a>
+            <a href="https://www.instagram.com/paashaastornooi" target="_blank"><i class="fa-brands fa-tiktok fa-l footer-socials-icon"></i></a>
+            <a href="https://www.tiktok.com/@paashaastornooi" target="_blank"><i class="fa-brands fa-instagram fa-l footer-socials-icon"></i></a>
         </div>
     </footer>
 </body>

@@ -2,17 +2,64 @@
 
 .main {
     height: 90vh;
-    width: 100%;
+    max-width: 100%;
     display: flex;
 
     &-text {
-        padding-left: 8rem;
+        padding: 6rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         color: $primary-color;
-        width: 40%;
-        height: 100%;
+        width: 50%;
+
+        &-head {
+            margin: 0.5rem 0;
+            letter-spacing: 1px;
+            font-size: 3rem;
+        }
+
+        .kapoenencolor {
+            color: $kapoenen-color;
+        }
+
+        .welpencolor {
+            color: $welpen-color;
+        }
+
+        .jonggiverscolor {
+            color: $jonggivers-color;
+        }
+
+        .giverscolor {
+            color: $givers-color;
+        }
+
+        .jinscolor {
+            color: $jins-color;
+        }
+
+        .leidingcolor {
+            color: $leiding-color;
+        }
+
+        &-para {
+            width: 75%;
+            color: black;
+            font-family: $font-spectral;
+            line-height: 2rem;
+            text-align: justify;
+
+            span {
+                font-family: $font-spectral;
+                color: $tertiary-color;
+                letter-spacing: 1px;
+            }
+        }
+
+        &-leiding {
+            margin: 1rem 0;
+        }
 
         &-prim {
             color: $primary-color;
@@ -57,21 +104,15 @@
     }
 
     &-image {
+        padding: 10rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 60%;
+        width: 50%;
 
         img {
-            border-radius: 10px;
-            width: 60%;
-            box-shadow: 0 0 25px $pure-black;
-
+            @include image(800px, 14 / 9);
         }
-
-        // &-indexpage {
-        //     box-shadow: 0 0 25px $pure-black;
-        // }
 
         &-kapoenen {
             outline: 7px solid $kapoenen-color;
@@ -112,10 +153,8 @@
 }
 
 .section {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
-    display: flex;
-    flex-direction: column;
 
     &-logocontainer {
         display: flex;
@@ -138,11 +177,8 @@
             justify-content: center;
             align-items: center;
 
-
             img {
-                border-radius: 10px;
-                width: 80%;
-                box-shadow: 0 0 25px $pure-black;
+                @include image(800px, 14 / 9);
             }
         }
 
@@ -155,11 +191,151 @@
 
             &-text {
                 padding: 1rem;
-                width: 80%;
+                width: 90%;
+                text-align: justify;
                 font-family: $font-spectral;
             }
         }
     }
+
+    &-small {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-smallhead {
+            font-family: $font-spectral;
+            font-variant: all-petite-caps;
+            font-weight: 900;
+            letter-spacing: 5px;
+            color: $tertiary-color;
+        }
+    }
+
+    &-event {
+        width: 100%;
+
+        &-info {
+            display: flex;
+            height: 90vh;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+
+    &-upcoming {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        &-header {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-head {
+                font-size: 5rem;
+                letter-spacing: 4px;
+                color: $primary-color;
+            }
+        }
+
+        &-text {
+            padding: 0 6rem;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-para {
+                font-family: $font-spectral;
+                text-align: justify;
+            }
+        }
+
+        &-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+
+            img {
+                border-radius: 10px;
+                width: 80%;
+                box-shadow: 0 0 25px $pure-black;
+
+            }
+
+        }
+    }
+
+    &-upcoming>.section-event:nth-child(1) .section-event-info {
+        height: 70vh;
+    }
+
+    &-other {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        &-header {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            &-head {
+                font-size: 5rem;
+                letter-spacing: 4px;
+                color: $primary-color;
+            }
+        }
+
+        &-text {
+            padding: 12rem;
+            width: 45%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-para {
+                font-family: $font-spectral;
+                text-align: justify;
+            }
+        }
+
+        &-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 55%;
+            height: 90vh;
+
+            img {
+                border-radius: 10px;
+                width: 60%;
+                box-shadow: 0 0 25px $pure-black;
+
+            }
+
+        }
+    }
+}
+
+.events {
+    height: auto;
 }
 
 // TAKWERKING
@@ -184,10 +360,7 @@
         }
 
         &-para {
-            &-verhuur {
-                // border: 1px solid red;
-                margin-bottom: 1.5rem;
-            }
+            width: 85%;
 
             p {
                 margin: 1rem 0;
@@ -218,24 +391,25 @@
         height: 100%;
         width: 40%;
         display: flex;
-        justify-content: flex-end;
+        align-items: center;
+        justify-content: center;
 
         &-container {
-            width: 75%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            align-items: center;
+            display: grid;
+            gap: 1.2rem 1.4rem; // tussenruimte tussen de afbeeldingen
+            grid-template-columns: repeat(2, 1fr); // width: 75%
 
             &-img {
                 position: relative;
                 width: 12rem;
                 height: 12rem;
-                margin: 0.5rem;
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                background-color: $pure-white;
+                justify-content: center;
+                // background-color: $pure-white;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 9rem;
                 transition: transform .2s cubic-bezier(0.83, 0, 0.17, 1);
 
                 h1 {
@@ -246,7 +420,7 @@
                     color: $primary-color;
                     font-size: 1.75rem;
                     background-color: rgb($pure-white, .6);
-                    width: 50%;
+                    width: 100%;
                     height: 100%;
                     letter-spacing: 2px;
                     line-height: 2rem;
@@ -254,10 +428,6 @@
                     opacity: 0;
                     transition: opacity .2s cubic-bezier(0.83, 0, 0.17, 1);
 
-                }
-
-                img {
-                    width: 50%;
                 }
 
                 &:hover {
@@ -274,64 +444,32 @@
     }
 }
 
-// Takken
-
-.main {
-    &-text {
-        width: 40%;
-        margin-left: 3rem;
-
-        &-head {
-            margin: 0.5rem 0;
-            letter-spacing: 1px;
-            font-size: 3rem;
-        }
-
-        .kapoenen {
-            color: $kapoenen-color;
-        }
-
-        .welpen {
-            color: $welpen-color;
-        }
-
-        .jonggivers {
-            color: $jonggivers-color;
-        }
-
-        .givers {
-            color: $givers-color;
-        }
-
-        .jins {
-            color: $jins-color;
-        }
-
-        .leiding {
-            color: $leiding-color;
-        }
-
-        &-para {
-            width: 70%;
-            color: black;
-            font-family: $font-spectral;
-            line-height: 2rem;
-            text-align: justify;
-
-            span {
-                font-family: $font-spectral;
-                color: $tertiary-color;
-                letter-spacing: 1px;
-            }
-        }
-
-        &-leiding {
-            margin: 1rem 0;
-        }
-    }
+.kapoenen {
+    background-image: url('../assets/Kapoenen.jpg');
 }
 
-// EVENTS
+.welpen {
+    background-image: url('../assets/Welpen.jpg');
+}
+
+.jonggivers {
+    background-image: url('../assets/Jong givers.jpg');
+}
+
+.givers {
+    background-image: url('../assets/givers.jpg');
+    background-size: 8rem;
+}
+
+.jins {
+    background-image: url('../assets/Jins.jpg');
+}
+
+.leiding {
+    background-image: url('../assets/Leiding.jpg');
+}
+
+// // EVENTS
 
 .events {
     width: 100%;
@@ -387,7 +525,7 @@
 
         &-text {
             padding: 12rem;
-            width: 45%;
+            width: 50%;
             height: 75vh;
             display: flex;
             justify-content: center;
@@ -403,12 +541,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 55%;
-            height: 75vh;
+            width: 45%;
+            height: 80vh;
 
             img {
                 border-radius: 10px;
-                width: 65%;
+                width: 80%;
                 box-shadow: 0 0 25px $pure-black;
 
             }
@@ -471,10 +609,10 @@
 // INSCHRIJVINGEN
 
 .formulier {
+    height: 90vh;
     width: 60%;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
     margin: 0rem auto;
 
     &-head {
@@ -529,7 +667,7 @@
                         font-family: $font-spectral;
                     }
 
-                    input{
+                    input {
                         width: 100%;
                     }
                 }
@@ -644,7 +782,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                    }    
+                    }
                 }
             }
         }
@@ -692,7 +830,6 @@
 
         &-para {
             &-verhuur {
-                // border: 1px solid red;
                 margin-bottom: 1.5rem;
             }
 
@@ -725,50 +862,28 @@
         height: 100%;
         width: 40%;
         display: flex;
-        justify-content: flex-end;
+        align-items: center;
+        justify-content: center;
+
 
         &-container {
-            width: 75%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            align-items: center;
+            display: grid;
+            gap: 1.2rem; // tussenruimte tussen de afbeeldingen
+            grid-template-columns: repeat(2, 1fr); // width: 75%
 
             &-img {
-                position: relative;
-                width: 12rem;
-                height: 12rem;
-                margin: 0.5rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: $pure-white;
+                width: 100%;
+                height: auto;
                 transition: transform .2s cubic-bezier(0.83, 0, 0.17, 1);
 
-                h1 {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: absolute;
-                    color: $primary-color;
-                    font-size: 1.75rem;
-                    background-color: rgb($pure-white, .6);
-                    width: 50%;
-                    height: 100%;
-                    letter-spacing: 2px;
-                    line-height: 2rem;
-                    text-align: center;
-                    opacity: 0;
-                    transition: opacity .2s cubic-bezier(0.83, 0, 0.17, 1);
-
-                }
-
                 img {
-                    width: 50%;
+                    vertical-align: bottom;
+                    width: 18rem;
+                    height: auto;
                 }
 
                 &:hover {
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                     transition: transform .2s cubic-bezier(0.83, 0, 0.17, 1);
 
                     h1 {
@@ -780,9 +895,6 @@
         }
     }
 }
-
-
-
 
 .faq-container {
     min-height: 90vh;

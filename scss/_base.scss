@@ -23,6 +23,14 @@ $font-spectral: 'Spectral', serif;
 
 // MIXINS
 
+@mixin image($max-width, $aspect-ratio) {
+    border-radius: 10px;
+    max-width: $max-width;
+    aspect-ratio: $aspect-ratio;
+    object-fit: cover;
+    box-shadow: 0 0 25px $pure-black;
+}
+
 // CALENDAR
 
 :root {
@@ -46,6 +54,7 @@ $font-spectral: 'Spectral', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    // border: 1px solid red;
 }
 
 html {
