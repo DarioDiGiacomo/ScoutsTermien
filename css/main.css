@@ -508,6 +508,12 @@ input[type=number]::-webkit-inner-spin-button {
   letter-spacing: 5px;
   color: #F37521;
 }
+.section-scroll {
+  margin-top: 1rem;
+  color: #F37521;
+  display: block;
+  text-align: center;
+}
 .section-event {
   width: 100%;
 }
@@ -1246,6 +1252,17 @@ input[type=number]::-webkit-inner-spin-button {
     height: auto;
     color: #fff;
   }
+  .menu ul a:hover {
+    color: inherit;
+    /* of een andere passende kleur */
+  }
+  .menu ul a:hover::after {
+    color: inherit;
+    /* of een andere passende kleur */
+    transition: none;
+    transform: none;
+    width: auto;
+  }
   .menu.open {
     height: 100%;
     transition: height 0.5s ease-in-out;
@@ -1465,6 +1482,9 @@ input[type=number]::-webkit-inner-spin-button {
   .main-text-par {
     margin-top: 0rem;
   }
+  .main-text-leiding p {
+    width: 100%;
+  }
   .main-image {
     width: 100%;
     height: 40%;
@@ -1496,6 +1516,10 @@ input[type=number]::-webkit-inner-spin-button {
     justify-content: flex-start;
     height: 50%;
     padding: 1rem 0;
+  }
+  .section-scroll {
+    display: block;
+    text-align: center;
   }
   .section-upcoming-text {
     padding: 1rem;
@@ -1547,16 +1571,21 @@ input[type=number]::-webkit-inner-spin-button {
   .takwerking-text {
     padding: 0 1rem;
     width: 100%;
+    height: 60%;
   }
   .takwerking-text-para {
     overflow-y: scroll;
   }
   .takwerking-imggrid {
-    overflow-y: scroll;
-    justify-content: flex-start;
+    height: 30%;
+    justify-content: center;
   }
   .takwerking-imggrid-container {
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
+  }
+  .takwerking-imggrid-container-img:hover {
+    transform: inherit;
   }
   .formulier-head {
     font-size: 2rem;
@@ -1570,16 +1599,25 @@ input[type=number]::-webkit-inner-spin-button {
   }
   .verhuur {
     padding: 0rem 2rem;
+    height: auto;
   }
   .verhuur-text {
+    justify-content: flex-start;
     padding: 0 1rem;
     width: 100%;
   }
-  .verhuur-text-para {
-    overflow-y: scroll;
-  }
   .verhuur-imggrid {
-    margin: 1rem 0;
+    display: none;
+    height: 60%;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .verhuur-imggrid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .verhuur-imggrid-container-img img {
+    object-fit: cover;
+    width: 15rem;
   }
 }
 

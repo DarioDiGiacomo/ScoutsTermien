@@ -214,6 +214,13 @@
         }
     }
 
+    &-scroll {
+        margin-top: 1rem;
+        color: $tertiary-color;
+        display: block;
+        text-align: center;
+    }
+
     &-event {
         
         width: 100%;
