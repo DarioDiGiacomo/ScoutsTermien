@@ -1625,6 +1625,7 @@ input[type=number]::-webkit-inner-spin-button {
     flex-direction: column;
   }
   .main-text {
+    border: 1px solid red;
     width: 100%;
     padding: 0rem 2rem;
     height: 70%;
@@ -1637,6 +1638,7 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 2rem;
   }
   .main-image {
+    border: 1px solid red;
     width: 100%;
     height: 30%;
     padding: 0rem;
@@ -1648,7 +1650,11 @@ input[type=number]::-webkit-inner-spin-button {
     object-fit: cover;
     box-shadow: 0 0 25px #000;
   }
+  .section-logocontainer {
+    border: 1px solid blue;
+  }
   .section-wrap-imgcontainer {
+    border: 1px solid red;
     width: 100%;
     height: 40%;
     padding: 0rem;
