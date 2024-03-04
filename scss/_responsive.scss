@@ -555,7 +555,7 @@
 
     .kalender {
         &-container {
-            height: 50%;
+            height: 70%;
             /* Pas deze hoogte aan zoals gewenst */
             overflow-y: auto;
             /* Voeg een verticale scroll toe als de kalender de hoogte overschrijdt */
@@ -651,12 +651,13 @@
 
     .main {
         flex-direction: column;
+        // height: auto;
 
         &-text {
             border:1px solid red;
             width: 100%;
             padding: 0rem 2rem;
-            height: 70%;
+            height: 100%;
 
             &-prim {
                 line-height: 3rem;
@@ -669,6 +670,7 @@
         }
 
         &-image {
+            display: none;
             border:1px solid red;
             width: 100%;
             height: 30%;
@@ -689,7 +691,7 @@
             &-imgcontainer {
             border:1px solid red;
                 width: 100%;
-                height: 40%;
+                height: 50%;
                 padding: 0rem;
 
 
@@ -699,22 +701,33 @@
             }
 
             &-textcontainer {
-                height: 60%;
+                height: 50%;
             }
+        }
+    }
+
+    .takwerking {
+        &-text {
+            height: 55%;
+        }
+
+        &-imggrid {
+            height: 45%;
         }
     }
 
     .formulier {
         width: 80%;
+        height: auto;
         flex-direction: column;
         align-items: center;
-        margin: 0rem auto;
+        margin: 0 auto 2rem;
 
         &-form {
             height: 100%;
             display: flex;
             flex-direction: column;
-            width: 70%;
+            width: 90%;
 
             &-item {
                 display: flex;

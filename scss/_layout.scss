@@ -215,14 +215,13 @@
     }
 
     &-scroll {
-        margin-top: 1rem;
+        margin: 1rem 0;
         color: $tertiary-color;
-        display: block;
+        display: none;
         text-align: center;
     }
 
     &-event {
-        
         width: 100%;
 
         &-info {

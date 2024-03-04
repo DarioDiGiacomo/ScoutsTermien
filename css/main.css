@@ -509,9 +509,9 @@ input[type=number]::-webkit-inner-spin-button {
   color: #F37521;
 }
 .section-scroll {
-  margin-top: 1rem;
+  margin: 1rem 0;
   color: #F37521;
-  display: block;
+  display: none;
   text-align: center;
 }
 .section-event {
@@ -1553,7 +1553,7 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 1rem;
   }
   .kalender-container {
-    height: 50%;
+    height: 70%;
     /* Pas deze hoogte aan zoals gewenst */
     overflow-y: auto;
     /* Voeg een verticale scroll toe als de kalender de hoogte overschrijdt */
@@ -1628,7 +1628,7 @@ input[type=number]::-webkit-inner-spin-button {
     border: 1px solid red;
     width: 100%;
     padding: 0rem 2rem;
-    height: 70%;
+    height: 100%;
   }
   .main-text-prim {
     line-height: 3rem;
@@ -1638,6 +1638,7 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 2rem;
   }
   .main-image {
+    display: none;
     border: 1px solid red;
     width: 100%;
     height: 30%;
@@ -1656,7 +1657,7 @@ input[type=number]::-webkit-inner-spin-button {
   .section-wrap-imgcontainer {
     border: 1px solid red;
     width: 100%;
-    height: 40%;
+    height: 50%;
     padding: 0rem;
   }
   .section-wrap-imgcontainer img {
@@ -1667,19 +1668,26 @@ input[type=number]::-webkit-inner-spin-button {
     box-shadow: 0 0 25px #000;
   }
   .section-wrap-textcontainer {
-    height: 60%;
+    height: 50%;
+  }
+  .takwerking-text {
+    height: 55%;
+  }
+  .takwerking-imggrid {
+    height: 45%;
   }
   .formulier {
     width: 80%;
+    height: auto;
     flex-direction: column;
     align-items: center;
-    margin: 0rem auto;
+    margin: 0 auto 2rem;
   }
   .formulier-form {
     height: 100%;
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 90%;
   }
   .formulier-form-item {
     display: flex;
