@@ -1,5 +1,11 @@
 @use 'base' as *;
 
+@media (prefers-color-scheme: dark) {
+    .hamburger-menu {
+        color: $pure-white;
+    }
+}
+
 @media screen and (max-width: 1366px) {
 
     .main {
@@ -651,7 +657,7 @@
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 414px) {
 
     .main {
         flex-direction: column;

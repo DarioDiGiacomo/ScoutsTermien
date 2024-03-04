@@ -22,6 +22,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #fff;
+}
+
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -1113,6 +1117,11 @@ input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  .hamburger-menu {
+    color: #fff;
+  }
+}
 @media screen and (max-width: 1366px) {
   .main-image img {
     border-radius: 10px;
@@ -1620,7 +1629,7 @@ input[type=number]::-webkit-inner-spin-button {
     width: 15rem;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 414px) {
   .main {
     flex-direction: column;
   }
