@@ -1158,6 +1158,9 @@ input[type=number]::-webkit-inner-spin-button {
     height: 6rem;
     background-size: 4.5rem;
   }
+  .takwerking-imggrid-container-img h1 {
+    display: none;
+  }
   .takwerking .givers {
     background-size: 4rem;
   }
