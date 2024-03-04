@@ -21,9 +21,6 @@
 html {
   scroll-behavior: smooth;
 }
-html ::-webkit-scrollbar {
-  display: none;
-}
 
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
@@ -509,7 +506,7 @@ input[type=number]::-webkit-inner-spin-button {
   color: #F37521;
 }
 .section-scroll {
-  margin: 1rem 0;
+  margin: 1rem 0 0.5rem;
   color: #F37521;
   display: none;
   text-align: center;
@@ -706,28 +703,28 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .kapoenen {
-  background-image: url("../assets/Kapoenen.jpg");
+  background-image: url("../assets/Kapoenen.png");
 }
 
 .welpen {
-  background-image: url("../assets/Welpen.jpg");
+  background-image: url("../assets/Welpen.png");
 }
 
 .jonggivers {
-  background-image: url("../assets/Jong givers.jpg");
+  background-image: url("../assets/Jong givers.png");
 }
 
 .givers {
-  background-image: url("../assets/givers.jpg");
+  background-image: url("../assets/givers.png");
   background-size: 8rem;
 }
 
 .jins {
-  background-image: url("../assets/Jins.jpg");
+  background-image: url("../assets/Jins.png");
 }
 
 .leiding {
-  background-image: url("../assets/Leiding.jpg");
+  background-image: url("../assets/Leiding.png");
 }
 
 .events {

@@ -58,10 +58,10 @@ $font-spectral: 'Spectral', serif;
 
 html {
     scroll-behavior: smooth;
+}
 
-    ::-webkit-scrollbar {
-        display: none;
-    }
+body {
+
 }
 
 input[type=number]::-webkit-outer-spin-button,
