@@ -24,8 +24,14 @@
         document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
+
+                eventTimeFormat: {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: false // Zet AM/PM-weergave uit
+                },
                 initialView: 'dayGridMonth',
-                firstDay: 1, 
+                firstDay: 1,
                 eventClick: function (info) {
                     info.jsEvent.preventDefault(); // don't let the browser navigate
                     if (info.event.url) {
@@ -45,28 +51,70 @@
                     url: 'events.html#paashaastornooi'
                 },
                 {
+                    display: 'background',
                     title: 'PaasHaasTornooi',
-                    start: '2024-03-30T09:00',
-                    end: '2024-04-01T23:59',
-                    color: '#184B6F',
-                    url: 'events.html#paashaastornooi'
+                    start: '2024-03-30',
+                    end: '2024-04-02',
+                    backgroundColor: '#151B45',
+                    url: 'events.html#paashaastornooi',
                 },
                 {
-                    display: 'block',
+                    title: 'PHT OPEN AIR',
+                    start: '2024-03-30T18:00',
+                    end: '2024-03-31T00:00',
+                    color: '#F37521',
+                    url: 'https://www.instagram.com/p/C3Vmqk9tA17/?img_index=1',
+                },
+                {
+                    title: 'PHT CAFE',
+                    start: '2024-03-31T21:00',
+                    end: '2024-04-01T00:00',
+                    color: '#F37521',
+                    url: 'https://www.instagram.com/p/C3hhs2Qt_eD/',
+                },
+                {
+                    display: 'background',
                     title: 'Rommelmarkt',
-                    start: '2024-04-20T12:00',
-                    color: '#184B6F',
-                    // textColor: 'white',
+                    start: '2024-04-27',
+                    backgroundColor: '#151B45',
                     url: 'events.html#rommelmarkt'
                 },
                 {
-                    display: 'block',
+                    display: 'background',
                     title: 'Spaghettidag',
-                    start: '2024-05-05T12:00',
-                    color: '#184B6F',
-                    // textColor: 'white',
+                    start: '2024-05-04',
+                    backgroundColor: '#151B45',
                     url: 'events.html#rommelmarkt'
-                }],
+                },
+                {
+                    display: 'background',
+                    title: 'Kamp 2024',
+                    start: '2024-07-18',
+                    end: '2024-07-28',
+                    backgroundColor: '#151B45',
+                },
+                {
+                    display: 'list-item',
+                    color: 'rgb(182, 0, 0)',
+                    title: 'Aankomst Jins',
+                    start: '2024-07-18',
+                    end: '2024-07-28',
+                },
+                {
+                    display: 'list-item',
+                    color: 'rgb(0, 0, 197)',
+                    title: 'Aankomst Givers & Jong-Givers',
+                    start: '2024-07-18',
+                    end: '2024-07-28',
+                },
+                {
+                    display: 'list-item',
+                    color: 'rgb(255, 223, 83)',
+                    title: 'Aankomst Kapoenen',
+                    start: '2024-07-21',
+                    end: '2024-07-28',
+                }
+                ],
                 height: '100%',
                 locale: 'esLocale',
             });
@@ -142,14 +190,23 @@
         </div>
         <div class="footer-nav">
             <h1 class="footer-nav-head">Zoek je deze?</h1>
-            <a class="footer-nav-link" href="faq.html"><p class="footer-nav-link-text">FAQ</p></a>
-            <a class="footer-nav-link" href="#"><p class="footer-nav-link-text">Events</p></a>
-            <a class="footer-nav-link" href="#"><p class="footer-nav-link-text">Verhuur</p></a>
+            <a class="footer-nav-link" href="faq.html">
+                <p class="footer-nav-link-text">FAQ</p>
+            </a>
+            <a class="footer-nav-link" href="#">
+                <p class="footer-nav-link-text">Events</p>
+            </a>
+            <a class="footer-nav-link" href="#">
+                <p class="footer-nav-link-text">Verhuur</p>
+            </a>
         </div>
         <div class="footer-socials">
-            <a href="https://www.facebook.com/scoutstermien" target="_blank"><i class="fa-brands fa-facebook-f footer-socials-icon fa-l"></i></a>
-            <a href="https://www.instagram.com/paashaastornooi" target="_blank"><i class="fa-brands fa-tiktok footer-socials-icon fa-l"></i></a>
-            <a href="https://www.tiktok.com/@paashaastornooi" target="_blank"><i class="fa-brands fa-instagram footer-socials-icon fa-l"></i></a>
+            <a href="https://www.facebook.com/scoutstermien" target="_blank"><i
+                    class="fa-brands fa-facebook-f footer-socials-icon fa-l"></i></a>
+            <a href="https://www.instagram.com/paashaastornooi" target="_blank"><i
+                    class="fa-brands fa-tiktok footer-socials-icon fa-l"></i></a>
+            <a href="https://www.tiktok.com/@paashaastornooi" target="_blank"><i
+                    class="fa-brands fa-instagram footer-socials-icon fa-l"></i></a>
         </div>
     </footer>
 </body>

@@ -1,6 +1,7 @@
 // COLORS
 
 $pure-black: #000;
+$off-white: #fcfaf8;
 $pure-white: #fff;
 
 $primary-color: #151B45;
@@ -10,7 +11,7 @@ $tertiary-color: #F37521;
 $kapoenen-color: rgb(255, 223, 83);
 $welpen-color: green;
 $jonggivers-color: orange;
-$givers-color:rgb(0, 0, 197);
+$givers-color: rgb(0, 0, 197);
 $jins-color: rgb(182, 0, 0);
 $leiding-color: purple;
 
@@ -42,12 +43,12 @@ $font-spectral: 'Spectral', serif;
     --fc-button-hover-border-color: none;
     --fc-button-border-color: none;
 
-    --fc-today-bg-color:#f375211f;
+    --fc-today-bg-color: #f375211f;
 
     --fc-event-bg-color: #F37521;
     --fc-button-font-family: $font-spectral;
-    // --fc-daygrid-event-dot-width: 5px;
-  }
+    --fc-bg-event-opacity: 0.8;
+}
 
 * {
     font-family: $font-staatliches;
@@ -58,9 +59,15 @@ $font-spectral: 'Spectral', serif;
 
 html {
     scroll-behavior: smooth;
+
+    ::-webkit-scrollbar {
+        display: none;
+        /* Verberg de scrollbar voor de body */
+    }
 }
 
 body {
+
     background-color: $pure-white;
 }
 
@@ -70,12 +77,65 @@ input[type=number]::-webkit-inner-spin-button {
     margin: 0;
 }
 
-.fc-event-title, .fc-event-time  {
+.fc-event-title,
+.fc-event-time {
     font-family: $font-spectral;
-    letter-spacing: .5px;
-    font-weight: normal;
+    color: $pure-white;
+    // letter-spacing: 1px;
+    // letter-spacing: .5px;
+    font-weight: bold;
 }
 
 .fc-toolbar-title {
     letter-spacing: 1px;
+}
+
+.underconstruction {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    // background-image: url("../assets/DoNotCross.png") ;
+    background-image: linear-gradient(rgba($pure-white, .9), rgba($pure-white, .9)), url("../assets/DoNotCross.png");
+    background-position: center;
+    background-size: 100%;
+
+
+    h1 {
+        font-size: 5rem;
+        color: $primary-color;
+    }
+
+    p {
+        font-family: $font-spectral;
+        font-size: 2rem;
+        color: $tertiary-color;
+    }
+
+    img {
+        width: 40%;
+    }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $tertiary-color;
+    color: $pure-white;
+    padding: 20px 40px;
+    z-index: 1000;
+    text-align: center;
+
+
+    h1 {    
+        letter-spacing: 2px;
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
 }

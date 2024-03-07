@@ -232,6 +232,7 @@
 }
 
 .footer {
+    background-color: rgba($tertiary-color, 0.05);
     box-shadow: 0 -5px 0 $tertiary-color, 0 0 15px $pure-black;
     align-items: center;
     justify-content: flex-start;
@@ -252,12 +253,16 @@
         margin-top: 0.5rem;
         font-family: $font-spectral;
         font-weight: 500;
-        color: $secondary-color;
+        color: $pure-black;
     }
 
     &-mail {
         color: $tertiary-color;
         text-decoration: none;
+
+        &:hover {
+            color: $secondary-color;
+        }
 
         &-text {
             margin-top: 0.5rem;
@@ -278,6 +283,11 @@
         &-link {
             text-decoration: none;
             color: $tertiary-color;
+
+            
+            &:hover {
+                color: $secondary-color;
+            }
 
             &-text {
                 margin-top: 0.5rem;

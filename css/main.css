@@ -6,9 +6,10 @@
   --fc-button-active-border-color: #151B45;
   --fc-button-hover-border-color: none;
   --fc-button-border-color: none;
-  --fc-today-bg-color:#f375211f;
+  --fc-today-bg-color: #f375211f;
   --fc-event-bg-color: #F37521;
   --fc-button-font-family: $font-spectral;
+  --fc-bg-event-opacity: 0.8;
 }
 
 * {
@@ -21,6 +22,10 @@
 html {
   scroll-behavior: smooth;
 }
+html ::-webkit-scrollbar {
+  display: none;
+  /* Verberg de scrollbar voor de body */
+}
 
 body {
   background-color: #fff;
@@ -32,14 +37,56 @@ input[type=number]::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.fc-event-title, .fc-event-time {
+.fc-event-title,
+.fc-event-time {
   font-family: "Spectral", serif;
-  letter-spacing: 0.5px;
-  font-weight: normal;
+  color: #fff;
+  font-weight: bold;
 }
 
 .fc-toolbar-title {
   letter-spacing: 1px;
+}
+
+.underconstruction {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../assets/DoNotCross.png");
+  background-position: center;
+  background-size: 100%;
+}
+.underconstruction h1 {
+  font-size: 5rem;
+  color: #151B45;
+}
+.underconstruction p {
+  font-family: "Spectral", serif;
+  font-size: 2rem;
+  color: #F37521;
+}
+.underconstruction img {
+  width: 40%;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F37521;
+  color: #fff;
+  padding: 20px 40px;
+  z-index: 1000;
+  text-align: center;
+}
+.popup h1 {
+  letter-spacing: 2px;
+  font-size: 4rem;
+}
+.popup p {
+  font-size: 1.25rem;
 }
 
 .header {
@@ -250,6 +297,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .footer {
+  background-color: rgba(243, 117, 33, 0.05);
   box-shadow: 0 -5px 0 #F37521, 0 0 15px #000;
   align-items: center;
   justify-content: flex-start;
@@ -268,11 +316,14 @@ input[type=number]::-webkit-inner-spin-button {
   margin-top: 0.5rem;
   font-family: "Spectral", serif;
   font-weight: 500;
-  color: #184B6F;
+  color: #000;
 }
 .footer-mail {
   color: #F37521;
   text-decoration: none;
+}
+.footer-mail:hover {
+  color: #184B6F;
 }
 .footer-mail-text {
   margin-top: 0.5rem;
@@ -290,6 +341,9 @@ input[type=number]::-webkit-inner-spin-button {
 .footer-nav-link {
   text-decoration: none;
   color: #F37521;
+}
+.footer-nav-link:hover {
+  color: #184B6F;
 }
 .footer-nav-link-text {
   margin-top: 0.5rem;
@@ -490,8 +544,8 @@ input[type=number]::-webkit-inner-spin-button {
   width: 50%;
 }
 .section-wrap-textcontainer-text {
-  padding: 1rem;
-  width: 90%;
+  padding: 0.5rem 0;
+  width: 80%;
   text-align: justify;
   font-family: "Spectral", serif;
 }
@@ -548,12 +602,46 @@ input[type=number]::-webkit-inner-spin-button {
   width: 50%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .section-upcoming-text-para {
+  padding: 1rem 0;
   font-family: "Spectral", serif;
   text-align: justify;
+}
+.section-upcoming-text-para span {
+  font-family: "Spectral", serif;
+  font-weight: bold;
+  color: #184B6F;
+}
+.section-upcoming-text .rightbutton {
+  display: flex;
+  justify-content: flex-end;
+}
+.section-upcoming-text-buttoncontainer {
+  width: 100%;
+  padding: 1rem 0 0;
+}
+.section-upcoming-text-buttoncontainer-button {
+  text-align: center;
+  width: 8.5rem;
+  border-radius: 5px;
+  background-color: #184B6F;
+  padding: 0.75rem 1rem;
+  transition: 0.2s ease-in-out;
+}
+.section-upcoming-text-buttoncontainer-button a {
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #fff;
+}
+.section-upcoming-text-buttoncontainer-button:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+  box-shadow: inset 0 0 100rem rgba(0, 0, 0, 0.2);
 }
 .section-upcoming-image {
   display: flex;
@@ -1115,6 +1203,20 @@ input[type=number]::-webkit-inner-spin-button {
   color: #184B6F;
   padding: 15px;
   display: none;
+}
+.answer span {
+  font-family: "Spectral", serif;
+  font-weight: bold;
+  color: #151B45;
+}
+.answer a {
+  font-family: "Spectral", serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+.answer .kapoenen {
+  color: rgb(255, 223, 83);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -70,12 +70,16 @@
             </ul>
         </nav>
     </div>
+    <div class="popup" id="customPopup">
+        <h1>Bedankt!</h1>
+        <p>Je gegevens zijn goed ontvangen.</p>
+      </div>
     <div class="main formulier">
         <h1 class="formulier-head">Inschrijving '23 - '24</h1>
         <form class="formulier-form" method="post" action="https://sheetdb.io/api/v1/ly68qon8lg5s3" id="sheetdb-form">
             <div class="formulier-form-item">
                 <label for="Naam">Naam van het kind</label>
-                <input type="text" name="Naam" id="Naam">
+                <input type="text" name="Naam" id="Naam" required>
             </div>
             <div class="formulier-form-item geboortedatum">
                 <label for="Geboortedatum">Geboortedatum</label>
@@ -83,17 +87,17 @@
                     <div class="datum-item">
                         <label class="lightlabel" for="Geboortedatum-dag">Dag</label>
                         <input type="number" maxlength="2" name="Geboortedatum-dag" pattern="\d{2,2}" placeholder="dd"
-                            id="geboortedatum" data-auto-tab>
+                            id="geboortedatum" data-auto-tab required>
                     </div>
                     <div class="datum-item">
                         <label class="lightlabel" for="Geboortedatum-maand">Maand</label>
                         <input type="number" maxlength="2" name="Geboortedatum-maand" pattern="\d{2,2}" placeholder="mm"
-                            id="geboortedatum" data-auto-tab>
+                            id="geboortedatum" data-auto-tab required>
                     </div>
                     <div class="datum-item">
                         <label class="lightlabel" for="Geboortedatum-jaar">Jaar</label>
                         <input type="number" maxlength="4" name="Geboortedatum-jaar" pattern="\d{4,4}"
-                            placeholder="jjjj" id="geboortedatum" data-auto-tab>
+                            placeholder="jjjj" id="geboortedatum" data-auto-tab required>
                     </div>
                 </div>
             </div>
@@ -102,7 +106,7 @@
                 <div class="contactgegevens">
                     <div class="contactgegevens-item">
                         <label class="lightlabel" for="Ouder">Naam van ouder/voogd</label>
-                        <input type="text" name="Ouder" id="ouder">
+                        <input type="text" name="Ouder" id="ouder" required>
                     </div>
                     <div class="contactgegevens-item">
                         <label class="lightlabel" for="Telefoon">Telefoonnummer</label>
@@ -110,7 +114,7 @@
                     </div>
                     <div class="contactgegevens-item">
                         <label class="lightlabel" for="Email">E-mail</label>
-                        <input type="email" name="Email" id="email">
+                        <input type="email" name="Email" id="email" required>
                     </div>
                 </div>
             </div>
@@ -119,17 +123,17 @@
                 <div class="woonplaats">
                     <div class="woonplaats-item">
                         <label class="lightlabel" for="Woonplaats-straat">Straat</label>
-                        <input type="text" name="Woonplaats-straat" id="woonplaats">
+                        <input type="text" name="Woonplaats-straat" id="woonplaats" required>
                     </div>
                     <div class="woonplaats-item">
                         <div class="woonplaats-item-last">
                             <div class="woonplaats-item-last-nrgm">
                                 <label class="lightlabel" for="Woonplaats-nummer">Nr</label>
-                                <input type="number" name="Woonplaats-nummer" id="woonplaats">
+                                <input type="number" name="Woonplaats-nummer" id="woonplaats" required>
                             </div>
                             <div class="woonplaats-item-last-nrgm">
                                 <label class="lightlabel" for="Woonplaats-gemeente">Gemeente</label>
-                                <input type="text" name="Woonplaats-gemeente" id="woonplaats">
+                                <input type="text" name="Woonplaats-gemeente" id="woonplaats" required>
                             </div>
                         </div>
                     </div>
@@ -139,17 +143,13 @@
                 <label for="SocialMedia">Wij Hebben recht om foto's te plaatsen op sociale media:</label>
                 <div class="social">
                     <div class="social-answers">
-                        <!-- <select name="SocialMedia">
-                            <option value="Ja">Ja</option>
-                            <option value="Nee">Nee</option>
-                        </select> -->
                         <div class="social-answers-answer container">
-                                <input type="radio" id="ja" name="SocialMedia" value="Ja">
+                                <input type="radio" id="ja" name="SocialMedia" value="Ja" required>
                                 <div class="checkmark"></div>
                                 <label>JA</label>
                             </div>
                             <div class="social-answers-answer">
-                                <input type="radio" id="nee" name="SocialMedia" value="Nee">
+                                <input type="radio" id="nee" name="SocialMedia" value="Nee" required>
                                 <div class="checkmark"></div>
                                 <label>NEE</label>
                             </div>

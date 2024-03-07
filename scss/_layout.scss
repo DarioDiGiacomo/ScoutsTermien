@@ -190,8 +190,8 @@
             width: 50%;
 
             &-text {
-                padding: 1rem;
-                width: 90%;
+                padding: .5rem 0;
+                width: 80%;
                 text-align: justify;
                 font-family: $font-spectral;
             }
@@ -259,12 +259,54 @@
             width: 50%;
             height: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
 
             &-para {
+                padding: 1rem 0;
                 font-family: $font-spectral;
                 text-align: justify;
+
+                span {
+                    font-family: $font-spectral;
+                    font-weight: bold;
+                    color: $secondary-color;
+                }
+            }
+
+            .rightbutton {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            &-buttoncontainer {
+                width: 100%;
+                padding: 1rem 0 0;
+
+                &-button {
+                    text-align: center;
+                    width: 8.5rem;
+                    border-radius: 5px;
+                    background-color: $secondary-color;
+                    padding: .75rem 1rem;
+                    transition: .2s ease-in-out;
+
+
+                    a {
+                        letter-spacing: 1px;
+                        text-decoration: none;
+                        font-size: 1rem;
+                        color: $pure-white;
+                    }
+
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: .2s ease-in-out;
+                        box-shadow: inset 0 0 100rem rgb(black, .2);
+                    }
+                }
             }
         }
 
@@ -618,6 +660,7 @@
     align-items: center;
     margin: 0rem auto;
 
+
     &-head {
         color: $primary-color;
         font-size: 3rem;
@@ -952,4 +995,23 @@
     color: $secondary-color;
     padding: 15px;
     display: none;
+
+    span {
+        font-family: $font-spectral;
+        font-weight: bold;
+        color: $primary-color;
+    }
+
+    a {
+        font-family: $font-spectral;
+        font-weight: bold;
+        text-decoration: none;
+        color: $pure-black;
+    }
+
+    .kapoenen {
+        color: $kapoenen-color;
+    }
+
+
 }
